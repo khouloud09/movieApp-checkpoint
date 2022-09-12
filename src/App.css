@@ -1,38 +1,117 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 12px;
+}
+body{
+  background: #141414;
+  color: white;
+}
+.App{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  
+}
+.movie-container{
+  margin: 80px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.movie-card{
+  width: 300px;
+  padding: 3rem 2rem;
   text-align: center;
+  box-shadow:0 .5rem 1.5rem rgba(255, 255, 255, 0.753);
+  outline: .1rem solid  rgba(247, 245, 245, 0.466);
+  outline-offset: -1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-card:hover{
+  outline: .1rem solid  white;
+  outline-offset: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie-details{
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.6;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-rating{
+  font-weight: 600;
+  font-size: 24px;
+}
+.filter-container input{
+  position: absolute;
+  top: 30px; right: 50px;
+   width: 400px;
+   height: 40px;
+   background: #fff;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   box-shadow:0 .5rem 1.5rem rgba(255, 255, 255, 0.753);
+   font-size: 16px;
+   padding: 10px;
+}
+.filter-container input:hover{
+  cursor: pointer;
+}
+.AddMovie-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+.AddMovie-container form{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  box-shadow:0 .5rem 1.5rem rgba(255, 255, 255, 0.753);
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AddMovie-container form input{
+  width: 600px;
+  height: 40px;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 16px;
+  padding: 10px;
+  
+}
+.AddMovie-container form input:hover{
+  cursor: pointer;
+}
+.AddMovie-container button{
+  width: 600px;
+  height: 40px;
+  background: #141414;
+  box-shadow:0 .5rem 1.5rem rgba(255, 255, 255, 0.753);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
 }
